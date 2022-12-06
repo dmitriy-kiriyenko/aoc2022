@@ -2,8 +2,12 @@
 
 module Day6
   class Part2 < Part1
-    def run
-      'not ready'
+    def size
+      14
+    end
+
+    def self.expected_result
+      19
     end
   end
 end
