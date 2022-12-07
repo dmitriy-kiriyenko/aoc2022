@@ -7,6 +7,7 @@ module Day7
       chomped_lines.each do |line|
         terminal.process(line)
       end
+
       get_answer(terminal.root)
     end
 
@@ -90,8 +91,8 @@ module Day7
         def to_s
           [
             "- #{name} (dir calculated_size = #{size})",
-            *children.map(&:to_s).flat_map { |s| s.lines }.map { |s| "  #{s.chomp}" }
-          ].select(&:present?).join("\n")
+            StrUtils.indented_lines(' ' * 2, children.map(&:to_s))
+          ].join("\n")
         end
 
         def to_h
