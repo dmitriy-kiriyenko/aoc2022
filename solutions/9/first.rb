@@ -38,7 +38,8 @@ module Day9
 
       def get_delta(from:, to:)
         current_delta = to - from
-        return 0.to_c if current_delta.real.abs <= 1 && current_delta.imag.abs <= 1
+
+        return 0.to_c if current_delta.abs2 <= 2
         Complex(to.real <=> from.real, to.imag <=> from.imag)
       end
     end
