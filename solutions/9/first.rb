@@ -40,7 +40,7 @@ module Day9
         current_delta = to - from
 
         return 0.to_c if current_delta.abs2 <= 2
-        Complex(to.real <=> from.real, to.imag <=> from.imag)
+        Complex(current_delta.real <=> 0, current_delta.imag <=> 0)
       end
     end
 
