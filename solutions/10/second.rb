@@ -3,7 +3,22 @@
 module Day10
   class Part2 < Part1
     def run
-      'not ready'
+      processor = Processor.new
+      chomped_lines.each do |line|
+        processor.command(line)
+      end
+      processor.pretty_crt
+    end
+
+    def self.expected_result
+<<CRT
+##..##..##..##..##..##..##..##..##..##..
+###...###...###...###...###...###...###.
+####....####....####....####....####....
+#####.....#####.....#####.....#####.....
+######......######......######......####
+#######.......#######.......#######.....
+CRT
     end
   end
 end
