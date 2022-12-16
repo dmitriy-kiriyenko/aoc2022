@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Day16
+module Day17
   class Part2
     def run
       'not ready'
